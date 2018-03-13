@@ -11,11 +11,11 @@ end
 
 
 class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+  self.table_name = 'salesforce.opportunity'
 end
 
 get "/contacts" do
-  @contacts = Contact.all
+  @contacts = Opportunity.all
   erb :index
 end
 
